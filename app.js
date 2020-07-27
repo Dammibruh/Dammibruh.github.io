@@ -46,7 +46,7 @@ var error_404 = new Vue({
     methods: {
         redr: function(){
             const rgx = /https:\/\/mish\.cf\/(?<thingy>.*)/i;
-            var key = rgx.exec(window.location.href);
+            var key = rgx.exec(String(window.location.href));
             $.ajax({
                 method: "get",
                 url: `https://mishortener.herokuapp.com/shortener/${key[1]}`,
