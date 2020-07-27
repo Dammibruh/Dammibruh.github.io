@@ -45,7 +45,7 @@ var error_404 = new Vue({
     },
     methods: {
         redr: function(){
-            const rgx = /https:\/\/mish\.cf\/(?<thingy>.*)/i;;
+            const rgx = /https:\/\/mish\.cf\/(?<thingy>.*)/i;
             var key = rgx.exec(window.location.href);
             $.ajax({
                 method: "get",
