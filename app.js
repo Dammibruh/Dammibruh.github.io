@@ -74,6 +74,8 @@ var error_404 = new Vue({
                 this.sec = i;
             };
             var key = window.location.href.split("/")[3];
+            alert(key);
+            alert(window.location.href.split("/"));
             $.ajax({
                 method: "get",
                 url: `https://mishortener.herokuapp.com/shortener/${key}`,
