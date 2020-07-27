@@ -12,6 +12,7 @@ div {
     bottom: 5em;
     position: relative;
     top: 5em;
+    text-align: center;
 }
 input {
     border: 1px solid black;
