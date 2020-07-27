@@ -73,10 +73,11 @@ var error_404 = new Vue({
                 await this.sleep(1000)
                 this.sec = i;
             };
-            var key = window.location.href.split("/")[3];
+            const rgx =  /https:\/\/mish.cf\/(?<thingy>.*)/i
+            var key = rgx.exec(window.location.href);
             $.ajax({
                 method: "get",
-                url: `https://mishortener.herokuapp.com/shortener/${key}`,
+                url: `https://mishortener.herokuapp.com/shortener/${key[1]}`,
                 success: function(r){
                     window.location.href = r;
                 }
