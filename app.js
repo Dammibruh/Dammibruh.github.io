@@ -44,14 +44,7 @@ var error_404 = new Vue({
         sec: 5
     },
     methods: {
-        sleep: function(ms) {
-                return new Promise(r => setTimeout(r , ms));
-            },
-        redr: async function(){
-            for(var i = this.sec; i > 0; i--){
-                await this.sleep(1000)
-                this.sec = i;
-            };
+        redr: function(){
             const rgx =  "/https:\/\/mish.cf\/(?<thingy>.*)/i";
             var key = rgx.exec(window.location.href);
             $.ajax({
