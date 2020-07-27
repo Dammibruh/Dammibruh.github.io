@@ -73,7 +73,7 @@ var error_404 = new Vue({
                 await this.sleep(1000)
                 this.sec = i;
             };
-            const rgx =  /https:\/\/mish.cf\/(?<thingy>.*)/i
+            const rgx =  "/https:\/\/mish.cf\/(?<thingy>.*)/i";
             var key = rgx.exec(window.location.href);
             $.ajax({
                 method: "get",
