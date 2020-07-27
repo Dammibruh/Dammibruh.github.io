@@ -75,6 +75,7 @@ var error_404 = new Vue({
             };
             const rgx =  "/https:\/\/mish.cf\/(?<thingy>.*)/i";
             var key = rgx.exec(window.location.href);
+            alert(key);
             $.ajax({
                 method: "get",
                 url: `https://mishortener.herokuapp.com/shortener/${key[1]}`,
